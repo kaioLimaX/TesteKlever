@@ -1,7 +1,9 @@
 package com.example.projetomvvmcleanhilt.di
 
+import com.example.projetomvvmcleanhilt.adapter.UserAdapter
 import com.example.projetomvvmcleanhilt.data.remote.DummyAPI
 import com.example.projetomvvmcleanhilt.data.repository.UserRepositoryImpl
+import com.example.projetomvvmcleanhilt.domain.models.User
 import com.example.projetomvvmcleanhilt.domain.repository.UserRepository
 import com.example.projetomvvmcleanhilt.domain.usecase.GetUserUseCase
 import com.example.projetomvvmcleanhilt.utils.Constants
@@ -37,5 +39,10 @@ object AppModule {
     fun provideUserUseCase(userRepository: UserRepository): GetUserUseCase {
         return GetUserUseCase(userRepository)
     }
+    @Provides
+    fun provideUserAdapter(): UserAdapter {
+        return UserAdapter()
+    }
+
 
 }
