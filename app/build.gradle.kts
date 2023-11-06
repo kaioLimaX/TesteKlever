@@ -48,7 +48,7 @@ android {
 
 dependencies {
     val lifecycle_version = "2.5.0-alpha02"
-    
+
 
     //lib Lifecycle
 
@@ -57,9 +57,13 @@ dependencies {
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 
+    //KTX Fragment
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
+
     //Dagger Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    implementation("com.google.dagger:hilt-android:2.48.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.48.1")
 
     //retrofit
 
