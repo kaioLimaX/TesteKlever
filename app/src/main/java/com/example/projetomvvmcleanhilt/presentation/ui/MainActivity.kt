@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.projetomvvmcleanhilt.R
 import dagger.hilt.android.AndroidEntryPoint
+
 //DTO - data transfer object(model de transferencia da api)
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

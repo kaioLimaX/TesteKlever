@@ -14,12 +14,12 @@ class UserRepositoryImpl @Inject constructor(
 
         try {
             val response = dummyAPI.getUsers()
-            if(response.isSuccessful && response.body() != null){
+            if (response.isSuccessful && response.body() != null) {
                 val responseAPI = response.body()
 
                 val listUser = responseAPI?.userDTOS
 
-                if(listUser != null){
+                if (listUser != null) {
                     /*val users = listUser.map { userDTO ->
                         userDTO.toUser()
 
@@ -29,7 +29,7 @@ class UserRepositoryImpl @Inject constructor(
             }
 
 
-        }catch (error : Exception){
+        } catch (error: Exception) {
             error.printStackTrace()
         }
 

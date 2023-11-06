@@ -8,18 +8,17 @@ class GetUserUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
 
-    suspend fun getUsers() : List<User>{
-        try {
+    suspend operator fun invoke(): List<User> {
+        return try {
             //Regras de negocio
 
             //recuperar Usuarios
-            val listUsers = userRepository.getUsers()
+            userRepository.getUsers()
             //a partir disto, pode ocorrer verificações das mais infitas maneiras
+            //neste caso, apenas retornaremos uma lista de usuarios
 
 
-
-
-        }catch (error : Exception){
+        } catch (error: Exception) {
             error.printStackTrace()
 
             return emptyList()
