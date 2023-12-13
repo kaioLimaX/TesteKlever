@@ -4,4 +4,20 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorShimmer">#dddddd</color>
+
+    <!--cor primaria-->
+
+    <color name="primaria">#8077DC</color>
+    <color name="primaria_variacao">#6960C4</color>
+
+    <!--cor secundaria-->
+
+    <color name="secundaria">#00ACF3</color>
+    <color name="secundaria_variacao">#00ACF3</color>
+
+
+    <color name="fab_done">#5FD564</color>
+
+
+    <color name="fundo">#EFEFEF</color>
 </resources>

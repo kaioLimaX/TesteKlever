@@ -34,9 +34,10 @@ data class UserDTO(
 
 fun UserDTO.toUser() : User {
     return User(
+        id = this.id,
         firstName = this.firstName,
         lastName = this.lastName,
-        address = this.address,
+        address = this.address.address,
         age = this.age,
         email = this.email,
         phone = this.phone,

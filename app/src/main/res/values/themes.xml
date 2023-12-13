@@ -2,7 +2,20 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ProjetoMVVMCleanHilt" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--cores primarias-->
+        <item name="colorPrimary">@color/secundaria</item>
+        <item name="colorPrimaryVariant">@color/secundaria_variacao</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!--cores secundarias-->
+        <item name="colorSecondary">@color/primaria</item>
+        <item name="colorSecondaryVariant">@color/primaria_variacao</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!--Status bar Color-->
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="backgroundColor">@color/fundo</item>
     </style>
 
     <style name="Theme.ProjetoMVVMCleanHilt" parent="Base.Theme.ProjetoMVVMCleanHilt" />

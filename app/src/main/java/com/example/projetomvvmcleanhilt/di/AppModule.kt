@@ -1,9 +1,11 @@
 package com.example.projetomvvmcleanhilt.di
 
 import com.example.projetomvvmcleanhilt.adapter.UserAdapter
+import com.example.projetomvvmcleanhilt.data.local.DatabaseHelper
+import com.example.projetomvvmcleanhilt.data.local.IUserDAO
+import com.example.projetomvvmcleanhilt.data.local.IUserDAOImpl
 import com.example.projetomvvmcleanhilt.data.remote.DummyAPI
-import com.example.projetomvvmcleanhilt.data.repository.UserRepositoryImpl
-import com.example.projetomvvmcleanhilt.domain.models.User
+import com.example.projetomvvmcleanhilt.domain.repository.UserRepositoryImpl
 import com.example.projetomvvmcleanhilt.domain.repository.UserRepository
 import com.example.projetomvvmcleanhilt.domain.usecase.GetUserUseCase
 import com.example.projetomvvmcleanhilt.utils.Constants
@@ -31,8 +33,13 @@ object AppModule {
     }
 
     @Provides
-    fun provideUserRepository(dummyAPI: DummyAPI): UserRepository {
-        return UserRepositoryImpl(dummyAPI)
+    fun provideUserRepository(dummyAPI: DummyAPI , iUserDAO: IUserDAO ): UserRepository {
+        return UserRepositoryImpl(dummyAPI, iUserDAO)
+    }
+
+    @Provides
+    fun provideIUserDAO(databaseHelper: DatabaseHelper): IUserDAO {
+        return IUserDAOImpl(databaseHelper)
     }
 
     @Provides
